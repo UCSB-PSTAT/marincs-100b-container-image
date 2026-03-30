@@ -8,8 +8,9 @@ RUN conda install -c conda-forge -y\
     r-here\
     r-palmerpenguins\
     r-quarto\
-    r-terra\
-    r::r-tidyterra
+    r-terra
+
+RUN R -e "install.packages(c( 'tidyterra'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())""
 
 USER $NB_USER
 
