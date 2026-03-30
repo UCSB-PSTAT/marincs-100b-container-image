@@ -9,7 +9,7 @@ RUN conda install -c conda-forge -y\
     r-palmerpenguins\
     r-quarto\
     r-terra\
-    r-tidyterra
+    r::r-tidyterra
 
 USER $NB_USER
 
