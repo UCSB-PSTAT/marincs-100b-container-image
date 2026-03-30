@@ -4,7 +4,12 @@ LABEL maintainer="LSIT Systems <lsitops@ucsb.edu>"
 
 USER root
 
-RUN R -e "install.packages(c('here', 'palmerpenguins', 'quarto', 'terra', 'tidyterra'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())"
+RUN conda install -c conda-forge -y\
+    r-here\
+    r-palmerpenguins\
+    r-quarto\
+    r-terra\
+    r-tidyterra
 
 USER $NB_USER
 
