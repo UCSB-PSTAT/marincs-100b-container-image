@@ -10,7 +10,7 @@ RUN conda install -c conda-forge -y\
     r-quarto\
     r-terra
 
-RUN R -e "install.packages(c( 'tidyterra'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())""
+RUN R -e "install.packages(c('tidyterra'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())"
 
 USER $NB_USER
 
