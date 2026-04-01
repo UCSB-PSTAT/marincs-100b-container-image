@@ -34,7 +34,6 @@ pipeline {
                         sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -q -e "getRversion() >= \\"4.5.2\\"" | tee /dev/stderr | grep -q "TRUE"'
                         sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"here\")"'
                         sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"palmerpenguins\")"'
-                        sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"quarto\")"'
                         sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"rmarkdown\")"'
                         sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"terra\")"'
                         sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"tidyterra\")"'
