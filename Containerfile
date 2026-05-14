@@ -13,5 +13,7 @@ RUN conda install -c conda-forge -y\
 
 RUN R -e "install.packages(c('tidyterra'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())"
 
+RUN echo 'PROJ_LIB="/opt/conda/share/proj"' >> $(R RHOME)/etc/Renviron
+
 USER $NB_USER
 
