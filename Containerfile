@@ -5,6 +5,8 @@ LABEL maintainer="LSIT Systems <lsitops@ucsb.edu>"
 USER root
 
 RUN conda install -c conda-forge -y\
+    libgdal-hdf5\
+    libgdal-netcdf\
     r-here\
     r-palmerpenguins\
     r-s2\
